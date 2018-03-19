@@ -1,5 +1,5 @@
 ﻿{
   "ConnectionStrings": {
-    "NetchexContextConnection": "Server=(localdb)\\MSSQLLocalDb;Database=Netchex;Trusted_Connection:true;MultipleActiveResultSets=true;"
+    "NetchexContextConnection": "Server=(localdb)\\MSSQLLocalDb;Database=Netchex;Trusted_Connection=true;MultipleActiveResultSets=true;"
   }
 }

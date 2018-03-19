@@ -15,11 +15,11 @@ namespace NetchexCodeProject.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    BirthDate = table.Column<string>(nullable: true),
-                    FirstName = table.Column<string>(nullable: true),
-                    LastName = table.Column<string>(nullable: true),
+                    BirthDate = table.Column<DateTime>(nullable: false),
+                    FirstName = table.Column<string>(nullable: false),
+                    LastName = table.Column<string>(nullable: false),
                     MiddleName = table.Column<string>(nullable: true),
-                    SocialSecurityNumber = table.Column<string>(nullable: true)
+                    SocialSecurityNumber = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -32,7 +32,7 @@ namespace NetchexCodeProject.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Name = table.Column<string>(nullable: true),
+                    Name = table.Column<string>(nullable: false),
                     PayPeriodsPerYear = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
@@ -47,11 +47,11 @@ namespace NetchexCodeProject.Migrations
                     Id = table.Column<int>(nullable: false),
                     EmployeeId = table.Column<int>(nullable: false),
                     HireDate = table.Column<DateTime>(nullable: false),
-                    HourlyRate = table.Column<decimal>(nullable: false),
+                    HourlyRate = table.Column<decimal>(nullable: true),
                     IsSalary = table.Column<bool>(nullable: false),
                     PayFrequencyId = table.Column<int>(nullable: false),
                     PayPeriodAmount = table.Column<decimal>(nullable: false),
-                    Salary = table.Column<decimal>(nullable: false)
+                    Salary = table.Column<decimal>(nullable: true)
                 },
                 constraints: table =>
                 {

@@ -26,7 +26,7 @@ namespace NetchexCodeProject.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("BirthDate");
+                    b.Property<DateTime>("BirthDate");
 
                     b.Property<string>("FirstName");
 
