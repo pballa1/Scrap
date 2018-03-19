@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using NetchexCodeProject.Models;
 
 namespace NetchexCodeProject
 {
@@ -27,6 +28,7 @@ namespace NetchexCodeProject
         public void ConfigureServices(IServiceCollection services)
         {
 			services.AddSingleton(_config);
+			services.AddDbContext<NetchexContext>();
 			services.AddMvc();
         }
 
